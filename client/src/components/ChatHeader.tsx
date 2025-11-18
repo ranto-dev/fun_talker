@@ -5,7 +5,7 @@ export function ChatHeader() {
         Fun Talker
       </h1>
       <button className="p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition">
-        ⚙️
+        😎🔥
       </button>
     </header>
   );
