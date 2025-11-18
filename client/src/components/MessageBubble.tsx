@@ -7,7 +7,7 @@ export function MessageBubble({ from, children }: Props) {
   const isUser = from === "user";
 
   return (
-    <div className={`flex ${isUser ? "justify-end" : "justify-start"} mb-3`}>
+    <div className={`flex ${isUser ? "justify-end" : "justify-start"} gap- mb-3`}>
       <div
         className={`
           max-w-[70%] px-4 py-2 rounded-xl text-sm leading-relaxed
