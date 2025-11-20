@@ -3,6 +3,7 @@ import { ChatHeader } from "./ChatHeader";
 import { MessageBubble } from "./MessageBubble";
 import { ChatInput } from "./ChatInput";
 import { TypingBubble } from "./TypingBubble";
+import { motion } from "framer-motion";
 
 async function sendToLocalModel(message: string): Promise<string> {
   const response = await fetch("http://localhost:8000/chat", {
@@ -36,7 +37,7 @@ export function ChatContainer() {
           ...m.slice(0, -1),
           { from: "bot", text: botReply },
         ]);
-      }, 5000);
+      }, 2000);
     } catch {
       setMessages((m) => [
         ...m.slice(0, -1),
@@ -46,7 +47,16 @@ export function ChatContainer() {
   }
 
   return (
-    <div className=" sm:w-[80%] md:w-[65%]  lg:w-[45%] xl:w-[30%] flex flex-col border border-neutral-200/10  bg-neutral-50 dark:bg-neutral-900">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 100,
+        delay: 0.4,
+      }}
+      className=" sm:w-[80%] md:w-[65%]  lg:w-[45%] xl:w-[30%] flex flex-col border border-neutral-200/10  bg-neutral-50 dark:bg-neutral-900"
+    >
       <ChatHeader />
 
       <div className="flex-1 flex flex-col gap-4 overflow-y-auto p-8">
@@ -62,6 +72,6 @@ export function ChatContainer() {
       </div>
 
       <ChatInput onSubmit={sendMessage} />
-    </div>
+    </motion.div>
   );
 }
