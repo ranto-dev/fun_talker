@@ -17,7 +17,7 @@ const App = () => {
   }
 
   return (
-    <div className="bg-neutral-900 h-screen p-8 flex justify-center overflow-hidden ">
+    <div className="bg-neutral-900 w-full h-screen p-8 flex justify-center overflow-hidden ">
       {/*
        * left emojie illustration
        */}
@@ -29,7 +29,7 @@ const App = () => {
           stiffness: 100,
           delay: 0.2,
         }}
-        className="absolute top-20 left-1 w-[25%] text-center"
+        className="absolute top-20 left-1 w-[25%] text-center hidden lg:block"
       >
         <p className="text-[4rem]">🤪</p>
       </motion.div>
@@ -42,7 +42,7 @@ const App = () => {
           stiffness: 100,
           delay: 0.2,
         }}
-        className="absolute top-1/2 left-72 w-[25%] text-center"
+        className="absolute top-1/2 lg:left-20 xl:left-52 w-[25%] text-center hidden lg:block"
       >
         <p className="text-4xl">🫣</p>
       </motion.div>
@@ -55,7 +55,7 @@ const App = () => {
           stiffness: 100,
           delay: 0.2,
         }}
-        className="absolute bottom-5 left-0 w-[25%] text-center"
+        className="absolute bottom-5 left-0 w-[25%] text-center hidden lg:block"
       >
         <p className="text-[7rem]">😎</p>
       </motion.div>
@@ -71,7 +71,7 @@ const App = () => {
           stiffness: 100,
           delay: 0.2,
         }}
-        className="absolute top-42 right-72 w-[25%] text-center"
+        className="absolute top-42 right-26 xl:right-36 w-[25%] text-center  hidden lg:block"
       >
         <p className="text-[5rem]">🤔</p>
       </motion.div>
@@ -84,7 +84,7 @@ const App = () => {
           stiffness: 100,
           delay: 0.2,
         }}
-        className="absolute bottom-20 right-2 w-[25%] text-center"
+        className="absolute bottom-20 right-2 w-[25%] text-center hidden lg:block"
       >
         <p className="text-[7rem]">😆</p>
       </motion.div>

@@ -55,7 +55,7 @@ export function ChatContainer() {
         stiffness: 100,
         delay: 0.4,
       }}
-      className=" sm:w-[80%] md:w-[65%]  lg:w-[45%] xl:w-[30%] flex flex-col border border-neutral-200/10  bg-neutral-50 dark:bg-neutral-900"
+      className=" sm:w-[60%] md:w-[50%]  lg:w-[45%] xl:w-[35%] flex flex-col border border-neutral-200/10  bg-neutral-50 dark:bg-neutral-900"
     >
       <ChatHeader />
 
